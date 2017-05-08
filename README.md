@@ -13,9 +13,9 @@
     1. if start test the result should show all color that commandline support
     
 # How to know constants?
-1. saparator is `_`
-2. all is uppercase
-3. the color name will by the latest
+1. Saparator is `_`
+2. All is **UPPERCASE**
+3. The color name will by the latest
 
 |color |Constants Code|
 |------|--------------|
