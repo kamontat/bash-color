@@ -16,13 +16,35 @@
 1. saparator is `_`
 2. all is uppercase
 3. the color name will by the latest
-    |color |regular constant|
-    |------|----------------|
-    |Black |BLACK           |
-    |Red   |RED             |
-    |Green |GREEN           |
-    |Yellow|YELLOW          |
-    |Purple|PURPLE          |
-    |Cyan  |CYAN            |
-    |White |WHITE           |
-4. xx
+|color |Constants Code|
+|------|--------------|
+|Black |BLACK         |
+|Red   |RED           |
+|Green |GREEN         |
+|Yellow|YELLOW        |
+|Purple|PURPLE        |
+|Cyan  |CYAN          |
+|White |WHITE         |
+
+## Special Charactor
+1. Bold
+2. Underline
+3. Background
+4. High Intensity
+5. Bold and High Intensity
+6. High Intensity with Background
+7. Blink
+|Special       |Constants Code|
+|--------------|--------------|
+|Bold          |B             |
+|Underline     |U             |
+|Background    |BG            |
+|High Intensity|HI            |
+|Blink         |BLINK         |
+
+### Rule of Merge Special Charactor
+1. Order by `Length` First, If same length
+2. Order by `alphabel`
+#### For example:
+- Bold and High Intensity = B_HI_XXXXX (XXXXX is regular color)
+- High Intensity with Background = BG_HI_XXXXX (XXXXX is regular color)
