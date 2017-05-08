@@ -23,7 +23,7 @@
 |Red   |RED           |
 |Green |GREEN         |
 |Yellow|YELLOW        |
-|Purple|PURPLE        |
+|Pink  |PINK          |
 |Cyan  |CYAN          |
 |White |WHITE         |
 
@@ -50,3 +50,7 @@
 #### For example:
 - Bold and High Intensity = B_HI_XXXXX (XXXXX is regular color)
 - High Intensity with Background = BG_HI_XXXXX (XXXXX is regular color)
+
+## Special Colors
+1. C - Default color setting of terminal
+2. CB - Default color setting of terminal **BUT** add more brightness
