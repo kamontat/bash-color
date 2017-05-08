@@ -11,3 +11,18 @@
 1. make all file are root readable
 2. testing color on commandline (enter `Y` to start testing)
     1. if start test the result should show all color that commandline support
+    
+# How to know constants?
+1. saparator is `_`
+2. all is uppercase
+3. the color name will by the latest
+    |color |regular constant|
+    |------|----------------|
+    |Black |BLACK           |
+    |Red   |RED             |
+    |Green |GREEN           |
+    |Yellow|YELLOW          |
+    |Purple|PURPLE          |
+    |Cyan  |CYAN            |
+    |White |WHITE           |
+4. xx

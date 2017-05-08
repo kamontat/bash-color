@@ -2,12 +2,12 @@
 cd "$(dirname "$0")"
 
 chmod 755 ./color_constants
-chmod 755 ./color_test
+chmod 755 ./tester
 
 printf "do you want to test[Y|n]? "
 read ans
 
 if [[ $ans == "Y" ]]; then
-    ./color_test
+    ./tester
 fi
 echo "complete!"

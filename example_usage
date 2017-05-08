@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source ./color_constants
+
+# \b = backspace
+# because of variable can echo near with normal text, so I space them and backspace to back
+printf "$RED \bthis$RESET $BLINK_RED \bis$RESET $HI_PURPLE \bcolor$RESET $U_GREEN \btester$RESET."
