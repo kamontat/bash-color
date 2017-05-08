@@ -23,7 +23,8 @@
 |Red   |RED           |
 |Green |GREEN         |
 |Yellow|YELLOW        |
-|Pink  |PINK          |
+|Blue  |BLUE          |
+|Pink  |PINK          |
 |Cyan  |CYAN          |
 |White |WHITE         |
 
