@@ -16,6 +16,7 @@
 1. saparator is `_`
 2. all is uppercase
 3. the color name will by the latest
+
 |color |Constants Code|
 |------|--------------|
 |Black |BLACK         |
@@ -34,6 +35,7 @@
 5. Bold and High Intensity
 6. High Intensity with Background
 7. Blink
+
 |Special       |Constants Code|
 |--------------|--------------|
 |Bold          |B             |
