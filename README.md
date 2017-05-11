@@ -55,3 +55,6 @@
 ## Special Colors
 1. C - Default color setting of terminal
 2. CB - Default color setting of terminal **BUT** add more brightness
+
+# More
+- This project have 1 file call `tester`, that will log all possible color from `0:0` => `110:110` so that many of line, Careful to use it!

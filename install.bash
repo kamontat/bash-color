@@ -9,7 +9,7 @@ printf "Do you want to test[Y|n]? "
 read -n 1 ans
 
 if [[ $ans == "Y" ]]; then
-    ./tester
+    ./example_usage
 fi
 
 printf "Do you want to delete git[Y|n]? "
