@@ -19,6 +19,14 @@ if [[ $ans == "Y" ]]; then
     sudo rm -rf .git 
 fi
 
+printf "Do you want to minimum folder[Y|n]? "
+read -n 1 ans
+
+if [[ $ans == "Y" ]]; then
+    rm -rf ./example_usage ./tester ./README.md ./install.bash
+fi
+
+
 source ./color_constants
 echo ""
 printf "$BLINK_RED \bcomplete!$RESET\n"
