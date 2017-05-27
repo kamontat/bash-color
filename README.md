@@ -7,6 +7,14 @@
     2. run `./install.bash`
 2. run by `source ./install.bash`
 
+# Import Color
+use `source` command to import this project
+1. This easiest way is download this project and import link this `source ./color_constants`
+2. (don't work on bash3, in bash3 use command below) 
+    - `source <(curl -s -N https://gist.githubusercontent.com/kamontat/717f75e6b87606940017adf385274044/raw/8dce8aa1e98f47583a1e5b4b094b2e134cab9d73/color_constants)`
+3. (work in all commandline) 
+    - `source /dev/stdin <<< "$(curl -s -N https://gist.githubusercontent.com/kamontat/717f75e6b87606940017adf385274044/raw/8dce8aa1e98f47583a1e5b4b094b2e134cab9d73/color_constants)"`
+
 # result / expected
 1. make all file are root readable
 2. testing color on commandline (enter `Y` to start testing)
