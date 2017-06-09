@@ -1,8 +1,0 @@
-#!/bin/bash
-
-for (( i = 0; i <= 110; i++ )); do
-    for (( j = 0; j <= 110; j++ )); do
-        printf "\033["$i";"$j"m Hi, Color code ([$i:$j) \033[0m\n"
-    done
-    echo "-------------------------"
-done
