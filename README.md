@@ -18,11 +18,11 @@ use `source` command to import this project
 1. This easiest way is download this project and import link this `source ./color_constants`
 2. (don't work on bash3)
 ```Bash
-source <(curl -sL -N https://gist.githubusercontent.com/kamontat/717f75e6b87606940017adf385274044/raw/8dce8aa1e98f47583a1e5b4b094b2e134cab9d73/color_constants.sh)
+source <(curl -sL -N https://gist.githubusercontent.com/kamontat/717f75e6b87606940017adf385274044/raw/e94f7f1092e9b81dbe5d34845813af9158260c99/color_constants.sh)
 ```
 3. (work in all commandline) 
 ```Bash
-source /dev/stdin <<< "$(curl -sL -N https://gist.githubusercontent.com/kamontat/717f75e6b87606940017adf385274044/raw/8dce8aa1e98f47583a1e5b4b094b2e134cab9d73/color_constants.sh)"
+source /dev/stdin <<< "$(curl -sL -N https://gist.githubusercontent.com/kamontat/717f75e6b87606940017adf385274044/raw/e94f7f1092e9b81dbe5d34845813af9158260c99/color_constants.sh)"
 ```
 
 # result / expected
