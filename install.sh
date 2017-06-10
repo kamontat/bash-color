@@ -19,7 +19,7 @@ read -n 1 ans
 echo ""
 
 if [[ $ans == "Y" ]]; then
-    rm -rf ./README.md ./install.bash
+    rm -rf ./README.md ./install.sh
 fi
 
 printf "${C_BG_5}${C_FG_7}complete!$C_RE\n"
