@@ -26,6 +26,8 @@ since 09/06/60-16:09 (dd/mm/yy-mm:ss)
 version 1.0
 "
 
+C_COMPLETE=0
+
 if [[ $1 == "help" || $1 == "h" ]]; then
     echo "$HELP"
     exit 0
@@ -84,6 +86,28 @@ for (( i=0; i<=ncolors; i++ )); do
     declare $temp="$(tput setab $i)"
 done
 
+# useful function
+# print with XXXX color
+function debug {
+    echo "$1"
+}
+
+function error {
+    echo "$1"
+}
+
+function info {
+    echo "$1"
+}
+
+function warning {
+    echo "$1"
+}
+
+function alert {
+    echo "$1"
+}
+
 # tester
 if [[ $1 == "test" ]]; then
     echo "${C_FG_3}front color 3 ${C_RE_AL}"
@@ -96,3 +120,7 @@ if [[ $1 == "test" ]]; then
     echo "${C_BO}${C_FG_7}${C_BG_3}Bold+F7+B3${C_RE_AL}"
     echo "${C_BL}${C_UL}${C_FG_1}Blink+Underline+F1${C_RE_UL} disable underline${C_RE_AL}"
 fi
+
+# completely setting color
+# you can use this variable to say is setting complete or not
+C_COMPLETE=1
