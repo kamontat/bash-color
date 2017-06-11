@@ -6,6 +6,14 @@
     - color_raw_constants.sh - old version of constant (using raw text to assign)
         - some terminal app, might miss the color.
     - install.sh - install color script
+    
+# Downlaod script Link
+I make it more easier by using github release to get the link
+The link is `https://github.com/kamontat/bash-color/releases/download/<RELEASE_VERSION>/<FILE>`
+1. RELEASE_VERSION = the version number that you can find at [release tab](https://github.com/kamontat/bash-color/releases)
+2. FILE = the script file, can by one of this
+    - `color_constants.sh` - for newest version
+    - `color_raw_constants.sh` - for raw version (this might match color in some app / OS)
 
 # Run
 - run by make install root runable make computer can run install.bash
@@ -18,11 +26,11 @@ use `source` command to import this project
 1. This easiest way is download this project and import link this `source ./color_constants`
 2. (don't work on bash3)
 ```Bash
-source <(curl -sL -N https://gist.githubusercontent.com/kamontat/717f75e6b87606940017adf385274044/raw/e94f7f1092e9b81dbe5d34845813af9158260c99/color_constants.sh)
+source <(curl -sL -N https://github.com/kamontat/bash-color/releases/download/v1/color_constants.sh)
 ```
 3. (work in all commandline) 
 ```Bash
-source /dev/stdin <<< "$(curl -sL -N https://gist.githubusercontent.com/kamontat/717f75e6b87606940017adf385274044/raw/e94f7f1092e9b81dbe5d34845813af9158260c99/color_constants.sh)"
+source /dev/stdin <<< "$(curl -sL -N https://github.com/kamontat/bash-color/releases/download/v1/color_constants.sh)"
 ```
 
 # result / expected
