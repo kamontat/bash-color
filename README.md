@@ -7,8 +7,8 @@
         - some terminal app, might miss the color.
     - install.sh - install color script
     
-# Downlaod script Link
-I make it more easier by using github release to get the link
+# Download script Link
+I make it more easier by using github release to get the link.  
 The link is `https://github.com/kamontat/bash-color/releases/download/<RELEASE_VERSION>/<FILE>`
 1. RELEASE_VERSION = the version number that you can find at [release tab](https://github.com/kamontat/bash-color/releases)
 2. FILE = the script file, can by one of this
