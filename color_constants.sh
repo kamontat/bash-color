@@ -89,23 +89,63 @@ done
 # useful function
 # print with XXXX color
 function debug {
-    echo "$1"
+    if [ $ncolors -ge 251 ]; then
+        echo "${C_FG_251}$1${C_RE_AL}"
+    elif [ $ncolors -ge 102 ]; then
+        echo "${C_FG_102}$1${C_RE_AL}"
+    elif [ $ncolors -ge 14 ]; then
+        echo "${C_FG_14}$1${C_RE_AL}"
+    elif [ $ncolors -ge 7 ]; then
+        echo "${C_FG_7}$1${C_RE_AL}"
+    else 
+        echo "$1"
+    fi
 }
 
 function error {
-    echo "$1"
+    if [ $ncolors -ge 196 ]; then
+        echo "${C_FG_196}$1${C_RE_AL}"
+    elif [ $ncolors -ge 1 ]; then
+        echo "${C_FG_1}$1${C_RE_AL}"
+    else 
+        echo "$1"
+    fi
 }
 
 function info {
-    echo "$1"
+    if [ $ncolors -ge 118 ]; then
+        echo "${C_FG_118}$1${C_RE_AL}"
+    elif [ $ncolors -ge 46 ]; then
+        echo "${C_FG_46}$1${C_RE_AL}"
+    elif [ $ncolors -ge 2 ]; then
+        echo "${C_FG_2}$1${C_RE_AL}"
+    else 
+        echo "$1"
+    fi
 }
 
 function warning {
-    echo "$1"
+    if [ $ncolors -ge 220 ]; then
+        echo "${C_FG_220}$1${C_RE_AL}"
+    elif [ $ncolors -ge 130 ]; then
+        echo "${C_FG_130}$1${C_RE_AL}"
+    elif [ $ncolors -ge 9 ]; then
+        echo "${C_FG_9}$1${C_RE_AL}"
+    else 
+        echo "$1"
+    fi
 }
 
 function alert {
-    echo "$1"
+    if [ $ncolors -ge 200 ]; then
+        echo "${C_FG_200}$1${C_RE_AL}"
+    elif [ $ncolors -ge 125 ]; then
+        echo "${C_FG_125}$1${C_RE_AL}"
+    elif [ $ncolors -ge 5 ]; then
+        echo "${C_FG_5}$1${C_RE_AL}"
+    else 
+        echo "$1"
+    fi
 }
 
 # tester
