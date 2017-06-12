@@ -163,4 +163,4 @@ fi
 
 # completely setting color
 # you can use this variable to say is setting complete or not
-C_COMPLETE=1
+C_COMPLETE=$ncolors 

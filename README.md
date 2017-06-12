@@ -53,12 +53,12 @@ source /dev/stdin <<< "$(curl -sL -N https://github.com/kamontat/bash-color/rele
 |White |WHITE         |
 
 ## Special Charactor
-1. BOLD          Bold Text
-2. UNDERLINE     Underlined Text
-3. REVERSE       Reverse video Text (support some app / OS)
-5. BLINK         Blinking Text (support some app / OS)
-6. INVISIBLE     Invisible Text (support some app / OS)
-7. STANDOUT      `Standout Mode` (support some app / OS)
+1. BOLD                 Bold Text
+2. UNDERLINE            Underlined Text
+3. REVERSE              Reverse video Text (support some app / OS)
+5. BLINK                Blinking Text (support some app / OS)
+6. INVISIBLE            Invisible Text (support some app / OS)
+7. STANDOUT             `Standout Mode` (support some app / OS)
 
 |Special       |Constants Code|
 |--------------|--------------|
@@ -70,12 +70,24 @@ source /dev/stdin <<< "$(curl -sL -N https://github.com/kamontat/bash-color/rele
 |Invisible     |IV            |
 
 ## Reset Variable
-1. 
+1. RESET_ALL            reset all type of text
+2. RESET_UNDERLINE      reset only underline
+3. RESET_STANDOUT_MODE  reset only stand-out mode 
 
+# Extra Function
+I create extra function that you can use it, with color integation. (it's might show not the same color in different app / OS)
+1. error - **red** color
+2. warning - **yellow**
+3. debug - **white**
+4. info - **green**
+5. alert - **pink**
+
+# Extra Variable
+`C_COMPLETE`: int -> possible is **0** and more
+    - where greater than 0, meaning color setup is successful, you can use color as you wish
+        - and C_COMPLETE is the number of bit color that your app/OS support.
+    - 0 meaning fail, you might need color_raw_constants instead.
 
 ### Example Usage
+all variable can be nested, without same type, for example you can add `fg` and `bg` together (see more in [color_constants.sh](./color_constants.sh) script in **test** mode), or add `underline` and `blink` and `fg` and `bg` together also allowable.
 
-
-
-# More
-- This project have 1 file call `tester`, that will log all possible color from `0:0` => `110:110` so that many of line, Careful to use it!
