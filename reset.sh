@@ -18,7 +18,7 @@ if [ ! -z $C_COMPLETE ]; then
     C_RE_SM=""
     C_RE_UL=""
 
-    for ((i=0; i<$C_COMPLETE; i++)); do
+    for ((i=0; i<=$C_COMPLETE; i++)); do
         temp="$DEFAULT$FORGROUND$i"
         declare $temp=""
 
