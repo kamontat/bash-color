@@ -13,9 +13,9 @@ function load {
 }
 
 if [[ $1 = "load" ]]; then
-    echo "load"
+    # echo "load"
     echo "$(load $CONS)"
 elif [[ $1 = "reset" ]]; then
-    echo "reset"
+    # echo "reset"
     echo "$(load $RESET)"
 fi
