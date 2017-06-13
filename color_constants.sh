@@ -77,13 +77,13 @@ C_RE_UL="$(tput rmul)"
 for (( i=0; i<=ncolors; i++ )); do
     temp="$DEFAULT$FORGROUND$i"
     # echo "$temp"
-    declare $temp="$(tput setaf $i)"
+    declare -x $temp="$(tput setaf $i)"
 done
 
 # declare background color
 for (( i=0; i<=ncolors; i++ )); do
     temp="$DEFAULT$BACKGROUND$i"
-    declare $temp="$(tput setab $i)"
+    declare -x $temp="$(tput setab $i)"
 done
 
 # useful function
@@ -163,4 +163,4 @@ fi
 
 # completely setting color
 # you can use this variable to say is setting complete or not
-C_COMPLETE=$ncolors 
+declare -x C_COMPLETE=$ncolors 
