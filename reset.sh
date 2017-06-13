@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ ! -z $C_COMPLETE ]; then
     DEFAULT="C_"
     FORGROUND="FG_"
