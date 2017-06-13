@@ -1,6 +1,6 @@
-#!/bin/bash3
+#!/bin/bash
 
-VERS="v2"
+VERS="v3"
 
 CONS="https://github.com/kamontat/bash-color/releases/download/$VERS/color_constants.sh"
 
