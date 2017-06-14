@@ -66,7 +66,7 @@ source /dev/stdin <<< "$(curl -sL -N https://github.com/kamontat/bash-color/rele
 |Standout Mode |SM            |
 |Invisible     |IV            |
 
-### First Number color
+### Color Code
 - 1 - Red
 - 2 - Green 
 - 3 - Yellow 
