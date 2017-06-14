@@ -38,30 +38,27 @@ source /dev/stdin <<< "$(curl -sL -N https://github.com/kamontat/bash-color/rele
     - easier by run `install.sh`
     
 # How to know constants?
-1. Saparator is `_`
-2. All is **UPPERCASE**
+1. All constant must begin with `C_`
+2. All constant code, separate by `_`
+3. All variable name is **UPPERCASE**
+4. The color represent by number, 
+    - from 0 to (belong with your terminal app and your setting)
+5. The color number, support only in `foreground` / `background` only!!
 
-|color |Constants Code|
-|------|--------------|
-|Black |BLACK         |
-|Red   |RED           |
-|Green |GREEN         |
-|Yellow|YELLOW        |
-|Blue  |BLUE          |
-|Pink  |PINK          |
-|Cyan  |CYAN          |
-|White |WHITE         |
-
-## Special Charactor
-1. BOLD                 Bold Text
-2. UNDERLINE            Underlined Text
-3. REVERSE              Reverse video Text (support some app / OS)
-5. BLINK                Blinking Text (support some app / OS)
-6. INVISIBLE            Invisible Text (support some app / OS)
-7. STANDOUT             `Standout Mode` (support some app / OS)
+## Available Charactor
+1. FORGROUND            Foreground
+2. BACKGROUND           background
+3. BOLD                 Bold Text
+4. UNDERLINE            Underlined Text
+5. REVERSE              Reverse video Text (support some app / OS)
+6. BLINK                Blinking Text (support some app / OS)
+7. INVISIBLE            Invisible Text (support some app / OS)
+8. STANDOUT             `Standout Mode` (support some app / OS)
 
 |Special       |Constants Code|
 |--------------|--------------|
+|Foreground    |FG            |
+|Background    |BG            |
 |Bold          |BO            |
 |Underline     |UL            |
 |Reverse       |RV            |
@@ -69,10 +66,31 @@ source /dev/stdin <<< "$(curl -sL -N https://github.com/kamontat/bash-color/rele
 |Standout Mode |SM            |
 |Invisible     |IV            |
 
+### First Number color
+1. Red
+2. Green 
+3. Yellow 
+4. Blue 
+5. Pink 
+7. White  
+
+### Example Variable Name
+`C_FG_1` or `C_BG_4` or `C_RV` or `C_IV`.
+
 ## Reset Variable
+The reset will start with `RE_` and end with code below
 1. RESET_ALL            reset all type of text
 2. RESET_UNDERLINE      reset only underline
 3. RESET_STANDOUT_MODE  reset only stand-out mode 
+
+|Reset Code    |Constants Code|
+|--------------|--------------|
+|All           |AL            |
+|Underline     |UL            |
+|Standout      |SM            |
+
+### Example Reset
+`C_RE_AL` for reset all modify code
 
 # Extra Function
 I create extra function that you can use it, with color integation. (it's might show not the same color in different app / OS)
