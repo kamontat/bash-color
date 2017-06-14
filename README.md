@@ -3,9 +3,17 @@
 2. run `cd color`
 3. write the code as what you want
     - color_constants.sh - new version of constant (using `tput`)
-    - color_raw_constants.sh - old version of constant (using raw text to assign)
+    - color_raw_constants.sh - old version of constant (using raw text to assign) **Move to raw branch**
         - some terminal app, might miss the color.
     - install.sh - install color script
+
+# File description
+All command below, you should run by `source` keyword (source <FILE_NAME>)
+1. [color_constants.sh](./color_constants.sh) - main color script which create variable and function below.
+2. [reset.sh](./reset.sh) - since sometime you might no need to output as color, run this script to do that for you.
+3. [util.sh](./util.sh) - the util for loading and reseting color.
+Command below, you can run by ./<FILE_NAME>
+1. [log_color.sh](./log_color.sh) - showing all support color in your terminal.
     
 # Download script Link
 I make it more easier by using github release to get the link.  
