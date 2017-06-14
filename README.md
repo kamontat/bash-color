@@ -67,12 +67,12 @@ source /dev/stdin <<< "$(curl -sL -N https://github.com/kamontat/bash-color/rele
 |Invisible     |IV            |
 
 ### First Number color
-1. Red
-2. Green 
-3. Yellow 
-4. Blue 
-5. Pink 
-7. White  
+- 1 - Red
+- 2 - Green 
+- 3 - Yellow 
+- 4 - Blue 
+- 5 - Pink 
+- 7 - White  
 
 ### Example Variable Name
 `C_FG_1` or `C_BG_4` or `C_RV` or `C_IV`.
