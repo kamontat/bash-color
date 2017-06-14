@@ -14,8 +14,8 @@ function load {
 
 if [[ $1 = "load" ]]; then
     # echo "load"
-    echo "$(load $CONS)"
+    [ -f ./color_constants.sh ] && cat ./color_constants.sh || echo "$(load $CONS)"
 elif [[ $1 = "reset" ]]; then
     # echo "reset"
-    echo "$(load $RESET)"
+    [ -f ./reset.sh ] && cat ./reset.sh || echo "$(load $RESET)"
 fi
