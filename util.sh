@@ -4,9 +4,9 @@ LOCATION="$(dirname $0)"
 
 VERS="v4"
 
-CONS="https://github.com/kamontat/bash-color/releases/download/$VERS/color_constants.sh"
+CONS="https://github.com/kamontat/bash-color/raw/$VERS/color_constants.sh"
 
-RESET="https://github.com/kamontat/bash-color/releases/download/$VERS/reset.sh"
+RESET="https://github.com/kamontat/bash-color/raw/$VERS/reset.sh"
 
 [[ $# -ne 1 ]] && echo "expected 1 parameter, got $#" && exit 1
 
@@ -14,7 +14,7 @@ function load {
     name="$(get_name_from_url $1)"
     context="$(curl -sL -N $1)"
     echo "$context" >> $LOCATION/$name
-    echo $context
+    echo "$context"
 }
 
 function get_name_from_url {
