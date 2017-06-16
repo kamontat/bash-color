@@ -21,7 +21,8 @@ The link is `https://github.com/kamontat/bash-color/releases/download/<RELEASE_V
 1. RELEASE_VERSION = the version number that you can find at [release tab](https://github.com/kamontat/bash-color/releases)
 2. FILE = the script file, can by one of this
     - `color_constants.sh` - for newest version
-    - `color_raw_constants.sh` - for raw version (this might match color in some app / OS)
+    - `color_reset.sh` - for unset all color variable.
+    - `color_util.sh` - script for loading and executing script.
 
 # Run
 - run by make install root runable make computer can run install.bash
@@ -34,16 +35,12 @@ use `source` command to import this project
 1. This easiest way is download this project and import link this `source ./color_constants`
 2. (don't work on bash3)
 ```Bash
-source <(curl -sL -N https://github.com/kamontat/bash-color/releases/download/v1/color_constants.sh)
+source <(curl -sL -N https://github.com/kamontat/bash-color/releases/download/v4.2/color_constants.sh)
 ```
 3. (work in all commandline) 
 ```Bash
-source /dev/stdin <<< "$(curl -sL -N https://github.com/kamontat/bash-color/releases/download/v1/color_constants.sh)"
+source /dev/stdin <<< "$(curl -sL -N https://github.com/kamontat/bash-color/releases/download/v4.2/color_constants.sh)"
 ```
-
-# result / expected
-1. make all file are root readable (755 / +x)
-    - easier by run `install.sh`
     
 # How to know constants?
 1. All constant must begin with `C_`
