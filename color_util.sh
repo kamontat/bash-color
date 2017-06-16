@@ -13,6 +13,7 @@ function load {
     name="$(get_name_from_url $1)"
     context="$(curl -sL -N $1)"
     echo "$context" >> $LOCATION/$name
+    chmod 755 $LOCATION/$name
     echo "$context"
 }
 
