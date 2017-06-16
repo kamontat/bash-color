@@ -1,14 +1,14 @@
 # Usage
 - Full command
 ```Bash
-source /dev/stdin <<< "$( bash <(curl -sL https://github.com/kamontat/bash-color/raw/<VERSION_NAME>/color_util.sh) <TYPE>)"
+source /dev/stdin <<< "$( bash <(curl -sL https://github.com/kamontat/bash-color/releases/download/<VERSION_NAME>/color_util.sh) <TYPE>)"
 ```
 
 - Short command
     - pre-condition 1: you need to download util file first
     - pre-condition 2: you need to path pwd to util location.
 ```Bash
-source /dev/stdin <<< "$(./util.sh <TYPE>)"
+source /dev/stdin <<< "$(./color_util.sh <TYPE>)"
 ```
 
 1. VERSION_NAME: version start with v4.2 or more...
@@ -21,13 +21,8 @@ source /dev/stdin <<< "$(./util.sh <TYPE>)"
 click [here](./images/)
 
 # Development
-1. clone this project by `git clone https://gist.github.com/717f75e6b87606940017adf385274044.git color`
-2. run `cd color`
-3. write the code as what you want
-    - color_constants.sh - new version of constant (using `tput`)
-    - color_raw_constants.sh - old version of constant (using raw text to assign) **Move to raw branch**
-        - some terminal app, might miss the color.
-    - install.sh - install color script
+1. [folk](https://github.com/kamontat/bash-color/edit/master/README.md#fork-destination-box) and clone this project to your computer
+2. write the code as what you want
 
 # File description
 All command below, you should run by `source` keyword (source <FILE_NAME>)
@@ -44,7 +39,7 @@ The link is `https://github.com/kamontat/bash-color/releases/download/<RELEASE_V
 # Important Topic
     
 # How to know constants?
-1. All constant must begin with `C_`
+1. All constant **must begin** with `C_`
 2. All constant code, separate by `_`
 3. All variable name is **UPPERCASE**
 4. The color represent by number, 
@@ -84,7 +79,7 @@ The link is `https://github.com/kamontat/bash-color/releases/download/<RELEASE_V
 `C_FG_1` or `C_BG_4` or `C_RV` or `C_IV`.
 
 ## Reset Variable
-The reset will start with `RE_` and end with code below
+The reset will start with `C_RE_` and end with code below
 1. RESET_ALL            reset all type of text
 2. RESET_UNDERLINE      reset only underline
 3. RESET_STANDOUT_MODE  reset only stand-out mode 
@@ -107,11 +102,10 @@ I create extra function that you can use it, with color integation. (it's might 
 5. alert - **pink**
 
 # Extra Variable
-`C_COMPLETE`: int -> possible is **0** and more
+`C_COMPLETE`: int -> possible value is **0** or positive number
     - where greater than 0, meaning color setup is successful, you can use color as you wish
         - and C_COMPLETE is the number of bit color that your app/OS support.
-    - 0 meaning fail, you might need color_raw_constants instead.
+    - 0 meaning fail, you might need color_raw_constants instead (in raw branch (not maintained)).
 
 ### Example Usage
 all variable can be nested, without same type, for example you can add `fg` and `bg` together (see more in [color_constants.sh](./color_constants.sh) script in **test** mode), or add `underline` and `blink` and `fg` and `bg` together also allowable.
-
