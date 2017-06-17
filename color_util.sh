@@ -12,7 +12,7 @@ VERS="v4.2"
 CONS="https://github.com/kamontat/bash-color/raw/$VERS/color_constants.sh"
 RESET="https://github.com/kamontat/bash-color/raw/$VERS/color_reset.sh"
 
-[[ $# -ne 1 ]] && echo "expected 1 parameter, got $#" && exit 1
+[[ $# -ne 1 && $# -ne 2 ]] && echo "expected 1 or 2 parameter, got $#" && exit 1
 
 function load {
     name="$(get_name_from_url $1)"
