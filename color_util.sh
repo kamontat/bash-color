@@ -4,6 +4,8 @@ LOCATION="$(dirname $0)"
 
 VERS="v4.2"
 
+[ -x $1 ] && VERS="$1"
+
 CONS="https://github.com/kamontat/bash-color/raw/$VERS/color_constants.sh"
 RESET="https://github.com/kamontat/bash-color/raw/$VERS/color_reset.sh"
 
