@@ -2,9 +2,12 @@
 
 LOCATION="$(dirname $0)"
 
+# $1 = action
+# $2 = version (optional)
+
 VERS="v4.2"
 
-[ -x $1 ] || VERS="$1"
+[ -x $2 ] || VERS="$2"
 
 CONS="https://github.com/kamontat/bash-color/raw/$VERS/color_constants.sh"
 RESET="https://github.com/kamontat/bash-color/raw/$VERS/color_reset.sh"
