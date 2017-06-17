@@ -60,11 +60,11 @@ done
 
 if [[ $fore -lt 0 ]] && [[ $back -lt 0 ]]; then
     all
-elif [[ $fore -gt 0 ]] && [[ $back -gt 0 ]]; then
+elif [[ $fore -ge 0 ]] && [[ $back -ge 0 ]]; then
     run $fore $back
     echo ""
-elif [[ $fore -gt 0 ]]; then 
+elif [[ $fore -ge 0 ]]; then 
     fixed_f $fore
-elif [[ $back -gt 0 ]]; then
+elif [[ $back -ge 0 ]]; then
     fixed_b $back
 fi
