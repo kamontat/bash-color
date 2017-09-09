@@ -28,7 +28,7 @@ function get_name_from_url {
 
 if [[ $1 = "load" || $1 = "li" ]]; then
     [ -f $LOCATION/color_constants.sh ] && cat $LOCATION/color_constants.sh || echo "$(load $CONS)"
-elif [[ $1 = "remove" || $1 = "rm" ]]; then
+elif [[ $1 = "reset" || $1 = "remove" || $1 = "rm" ]]; then
     [ -f $LOCATION/color_reset.sh ] && cat $LOCATION/color_reset.sh || echo "$(load $RESET)"
 elif [[ $1 = "clear" || $1 = "cl" ]]; then
     [ -f $LOCATION/color_constants.sh ] && rm -f $LOCATION/color_constants.sh
