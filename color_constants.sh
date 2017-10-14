@@ -55,18 +55,18 @@ BACKGROUND="BG_"
 temp=
 
 # extra word
-C_BO="$(tput bold)"
-C_DI="$(tput dim)"
-C_UL="$(tput smul)"
-C_RV="$(tput rev)"
-C_SM="$(tput smso)"
-C_BL="$(tput blink)"
-C_IV="$(tput invis)"
+export C_BO="$(tput bold)"
+export C_DI="$(tput dim)"
+export C_UL="$(tput smul)"
+export C_RV="$(tput rev)"
+export C_SM="$(tput smso)"
+export C_BL="$(tput blink)"
+export C_IV="$(tput invis)"
 
 # reset variable
-C_RE_AL="$(tput sgr0)"
-C_RE_SM="$(tput rmso)"
-C_RE_UL="$(tput rmul)"
+export C_RE_AL="$(tput sgr0)"
+export C_RE_SM="$(tput rmso)"
+export C_RE_UL="$(tput rmul)"
 
 # example
 # programmer=Ines
@@ -77,13 +77,13 @@ C_RE_UL="$(tput rmul)"
 for (( i=0; i<=ncolors; i++ )); do
     temp="$DEFAULT$FORGROUND$i"
     # echo "$temp"
-    declare -x $temp="$(tput setaf $i)"
+    export $temp="$(tput setaf $i)"
 done
 
 # declare background color
 for (( i=0; i<=ncolors; i++ )); do
     temp="$DEFAULT$BACKGROUND$i"
-    declare -x $temp="$(tput setab $i)"
+    export $temp="$(tput setab $i)"
 done
 
 # useful function
@@ -148,6 +148,13 @@ function alert {
     fi
 }
 
+# export function
+export -f debug
+export -f error
+export -f info
+export -f warning
+export -f alert
+
 # tester
 if [[ $1 == "test" ]]; then
     echo "${C_FG_3}front color 3 ${C_RE_AL}"
@@ -163,4 +170,4 @@ fi
 
 # completely setting color
 # you can use this variable to say is setting complete or not
-declare -x C_COMPLETE=$ncolors 
+export C_COMPLETE=$ncolors 
