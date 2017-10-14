@@ -5,26 +5,26 @@ if [ ! -z $C_COMPLETE ]; then
     FORGROUND="FG_"
     BACKGROUND="BG_"
 
-    C_BO=""
-    C_DI=""
-    C_UL=""
-    C_RV=""
-    C_SM=""
-    C_BL=""
-    C_IV=""
+    unset C_BO
+    unset C_DI
+    unset C_UL
+    unset C_RV
+    unset C_SM
+    unset C_BL
+    unset C_IV
 
     # reset variable
-    C_RE_AL=""
-    C_RE_SM=""
-    C_RE_UL=""
+    unset C_RE_AL
+    unset C_RE_SM
+    unset C_RE_UL
 
     for ((i=0; i<=$C_COMPLETE; i++)); do
         temp="$DEFAULT$FORGROUND$i"
-        declare $temp=""
+        unset $temp
 
         temp="$DEFAULT$BACKGROUND$i"
-        declare $temp=""
+        unset $temp
     done
 fi
 
-export C_COMPLETE=
+unset C_COMPLETE
