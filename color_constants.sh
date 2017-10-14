@@ -26,7 +26,7 @@ since 09/06/60-16:09 (dd/mm/yy-mm:ss)
 version 1.0
 "
 
-C_COMPLETE=0
+unset C_COMPLETE
 
 if [[ $1 == "help" || $1 == "h" ]]; then
     echo "$HELP"
