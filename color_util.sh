@@ -5,7 +5,7 @@ LOCATION="$(dirname $0)"
 # $1 = action
 # $2 = version (optional)
 
-VERS="v4.2"
+VERS="v4.3.1"
 
 [ -x $2 ] || VERS="$2"
 
