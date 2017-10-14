@@ -14,6 +14,9 @@ RESET="https://github.com/kamontat/bash-color/raw/$VERS/color_reset.sh"
 
 [[ $# -ne 1 && $# -ne 2 ]] && echo "expected 1 or 2 parameter, got $#" && exit 1
 
+# @explain    - download file and save in the same name same location
+# @params - 1 - url of downloaded file
+# @return     - context of the file that downloaded
 function load {
     name="$(get_name_from_url $1)"
     context="$(curl -sL -N $1)"
@@ -22,6 +25,8 @@ function load {
     echo "$context"
 }
 
+# @params - 1 - file url
+# @return     - name of file in url
 function get_name_from_url {
     echo "${1##*/}"
 }
