@@ -1,24 +1,39 @@
+# Table of Content
+1. [usage](#usage)
+    - [name](#utilities-name)
+2. [download-link](#download-script-link)
+3. [image](#imagescreenshot)
+4. [development](#development)
+5. [file](#file-description)
+6. [constants](#how-to-know-constants)
+    - [Charactor](#available-charactor) - [example](#example-variable-name)
+    - [Reset](#reset-variable) - [example](#example-reset)
+7. [extra function](#extra-function)
+8. [extra variable](#extra-variable)
+9. [example](#example-usage)
+
+
 # Usage
-- Full command
-```Bash
-source /dev/stdin <<< "$( bash <(curl -sL https://github.com/kamontat/bash-color/releases/download/<VERSION_NAME>/color_util.sh) <TYPE>)"
-```
+1. download utils.sh from [release](https://github.com/kamontat/bash-color/releases) page
+2. give permission to file by run `chmod +x ./utils.sh`
+3. run command `./utils.sh <parameter> <version>`
+    - parameters 
+        - load - load color in bash
+        - remove - remove color from bash
+        - clear - clear cache from system
+        - help - help command
+    - version - version from tag in Github
+    
+### utilities name
+- `v4.2 or less` - name: **util.sh**
+- `v4.4 or more` - name: **utils.sh**
 
-- Short command
-    - pre-condition 1: you need to download util file first
-    - pre-condition 2: you need to path pwd to util location.
-```Bash
-source /dev/stdin <<< "$(./color_util.sh <TYPE>)"
-```
+# Download script Link
+I make it more easier by using github release to get the link.
+The link is `https://github.com/kamontat/bash-color/releases/download/<RELEASE_VERSION>/color_utils.sh` (for version 4.4 or more)
 
-1. VERSION_NAME: version start with v4.2 or more...
-2. TYPE: `load` (`li`) or `remove` (`rm`) or `clear` (`cl`)
-    - load - load color in bash
-    - remove - remove color from bash
-    - clear - clear cache from system
-
-# Image / ScreenShot
-click [here](./images/)
+# Image/ScreenShot
+click [here](./images)
 
 # Development
 1. [folk](https://github.com/kamontat/bash-color/edit/master/README.md#fork-destination-box) and clone this project to your computer
@@ -28,12 +43,8 @@ click [here](./images/)
 All command below, you should run by `source` keyword (source <FILE_NAME>)
 1. [color_constants.sh](./color_constants.sh) - main color script which create variable and function below.
 2. [color_reset.sh](./color_reset.sh) - unset all variable color that `color_constants.sh` created
-3. [color_util.sh](./color_util.sh) - util for set and unset color variable. you can use only this file to execute everything in this repository
+3. [color_utils.sh](./color_utils.sh) - util for set and unset color variable. you can use only this file to execute everything in this repository
 4. [color_test.sh](./color_test.sh) - choose / show / list all available color in your terminal (learn more at `color_test.sh -h`)
-    
-# Download script Link
-I make it more easier by using github release to get the link.
-The link is `https://github.com/kamontat/bash-color/releases/download/<RELEASE_VERSION>/color_util.sh` (for version 4.2 or more)
 
 --------------
 # Important Topic
