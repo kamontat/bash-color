@@ -108,4 +108,4 @@ I create extra function that you can use it, with color integation. (it's might 
     - 0 meaning fail, you might need color_raw_constants instead (in raw branch (not maintained)).
 
 ### Example Usage
-all variable can be nested, without same type, for example you can add `fg` and `bg` together (see more in [color_constants.sh](./color_constants.sh) script in **test** mode), or add `underline` and `blink` and `fg` and `bg` together also allowable.
+all variable can be nested, but the must be difference type. For example you can add `fg` and `bg` together (see more in [color_constants.sh](https://github.com/kamontat/bash-color/blob/4b2f7f29940b8001d1d2aca1f8e5b84262e44144/color_constants.sh#L159-L169)), or add `underline` and `blink` and `fg` and `bg` together.
