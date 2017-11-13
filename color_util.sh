@@ -1,41 +1,54 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-LOCATION="$(dirname $0)"
+LOCATION="$(dirname "$0")"
 
-# $1 = action
-# $2 = version (optional)
+CONSTANTS_FILE="color_constants.sh"
+RESET_FILE="color_reset.sh"
 
-VERS="v4.3.1"
+VERSION="v4.4"
 
-[ -x $2 ] || VERS="$2"
+[ -n "$2" ] && VERSION="$2"
 
-CONS="https://github.com/kamontat/bash-color/raw/$VERS/color_constants.sh"
-RESET="https://github.com/kamontat/bash-color/raw/$VERS/color_reset.sh"
+CONS="https://github.com/kamontat/bash-color/raw/$VERSION/$CONSTANTS_FILE"
+RESET="https://github.com/kamontat/bash-color/raw/$VERSION/$RESET_FILE"
 
 [[ $# -ne 1 && $# -ne 2 ]] && echo "expected 1 or 2 parameter, got $#" && exit 1
 
-# @explain    - download file and save in the same name same location
-# @params - 1 - url of downloaded file
-# @return     - context of the file that downloaded
 function load {
-    name="$(get_name_from_url $1)"
-    context="$(curl -sL -N $1)"
-    echo "$context" >> $LOCATION/$name
-    chmod 755 $LOCATION/$name
-    echo "$context"
+    name="$LOCATION/$(get_name_from_url "$1")"
+    curl -sLo "$name" "$1"
+    chmod 755 "$name"
 }
 
-# @params - 1 - file url
-# @return     - name of file in url
 function get_name_from_url {
     echo "${1##*/}"
 }
 
+file=
+
 if [[ $1 = "load" || $1 = "li" ]]; then
-    [ -f $LOCATION/color_constants.sh ] && cat $LOCATION/color_constants.sh || echo "$(load $CONS)"
-elif [[ $1 = "reset" || $1 = "remove" || $1 = "rm" ]]; then
-    [ -f $LOCATION/color_reset.sh ] && cat $LOCATION/color_reset.sh || echo "$(load $RESET)"
+    file="$LOCATION/$CONSTANTS_FILE"
+    [ ! -f "$file" ] && load "$CONS"
+elif [[ $1 = "remove" || $1 = "rm" ]]; then
+    file="$LOCATION/$RESET_FILE"
+    [ ! -f "$file" ] && load "$RESET"
 elif [[ $1 = "clear" || $1 = "cl" ]]; then
-    [ -f $LOCATION/color_constants.sh ] && rm -f $LOCATION/color_constants.sh
-    [ -f $LOCATION/color_reset.sh ] && rm -f $LOCATION/color_reset.sh
+    [ -f "$LOCATION/$CONSTANTS_FILE" ] && rm -f "$LOCATION/$CONSTANTS_FILE"
+    [ -f "$LOCATION/$RESET_FILE" ] && rm -f "$LOCATION/$RESET_FILE"
+    exit 0
+elif [[ $1 = "help" || $1 = "h" ]]; then
+  echo "
+color utils: accept 2 parameters
+  >> parameters
+    1. action
+      - load   | li
+      - remove | rm
+      - clear  | cl
+      - help   | h
+    2. version number
+      - get from tag in github 'https://github.com/kamontat/bash-color/releases'
+  "
+  exit 0
 fi
+
+[ -f "$file" ] && source "$file" || exit 2
