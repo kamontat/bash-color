@@ -88,7 +88,7 @@ done
 
 # useful function
 # print with XXXX color
-function debug {
+debug() {
     if [ $ncolors -ge 251 ]; then
         echo "${C_FG_251}$1${C_RE_AL}"
     elif [ $ncolors -ge 102 ]; then
@@ -102,7 +102,7 @@ function debug {
     fi
 }
 
-function error {
+error() {
     if [ $ncolors -ge 196 ]; then
         echo "${C_FG_196}$1${C_RE_AL}"
     elif [ $ncolors -ge 1 ]; then
@@ -112,7 +112,7 @@ function error {
     fi
 }
 
-function info {
+info() {
     if [ $ncolors -ge 118 ]; then
         echo "${C_FG_118}$1${C_RE_AL}"
     elif [ $ncolors -ge 46 ]; then
@@ -124,7 +124,7 @@ function info {
     fi
 }
 
-function warning {
+warning() {
     if [ $ncolors -ge 220 ]; then
         echo "${C_FG_220}$1${C_RE_AL}"
     elif [ $ncolors -ge 130 ]; then
@@ -136,7 +136,7 @@ function warning {
     fi
 }
 
-function alert {
+alert() {
     if [ $ncolors -ge 200 ]; then
         echo "${C_FG_200}$1${C_RE_AL}"
     elif [ $ncolors -ge 125 ]; then
