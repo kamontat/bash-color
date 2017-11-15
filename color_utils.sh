@@ -5,7 +5,7 @@ LOCATION="$(dirname "$0")"
 CONSTANTS_FILE="color_constants.sh"
 RESET_FILE="color_reset.sh"
 
-VERSION="v4.4"
+VERSION="v4.4.1"
 
 [ -n "$2" ] && VERSION="$2"
 
