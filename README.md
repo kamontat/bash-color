@@ -18,11 +18,12 @@
 2. give permission to file by run `chmod +x ./utils.sh`
 3. run command `source /dev/stdin <<<(./src/theme/color_utils.sh <parameters> <version>) &>/dev/null`
     - parameters 
-        - load   - load color in bash
-        - remove - remove color from bash
-        - clear  - clear cache from system
-        - test   - run test command (check is color loaded?)
-        - help   - help command
+        - load    - load color in bash
+        - remove  - remove color from bash
+        - clear   - clear cache from system
+        - test    - run test command (check is color loaded?)
+        - version - get current `bash-color` version
+        - help    - help command
     - version - version from tag in Github
     
 ### utilities name
