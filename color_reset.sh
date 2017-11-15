@@ -27,4 +27,32 @@ if [ ! -z $C_COMPLETE ]; then
     done
 fi
 
+# reset useful function
+debug() {
+    echo "$1"
+}
+
+error() {
+    echo "$1"
+}
+
+info() {
+    echo "$1"
+}
+
+warning() {
+    echo "$1"
+}
+
+alert() {
+    echo "$1"
+}
+
+# export function
+export -f debug
+export -f error
+export -f info
+export -f warning
+export -f alert
+
 unset C_COMPLETE
