@@ -51,4 +51,4 @@ color utils: accept 2 parameters
   exit 0
 fi
 
-[ -f "$file" ] && source "$file" || exit 2
+[ -f "$file" ] && cat "$file" || exit 2
