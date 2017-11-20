@@ -16,7 +16,7 @@
 # Usage
 1. download utils.sh from [release](https://github.com/kamontat/bash-color/releases) page
 2. give permission to file by run `chmod +x ./utils.sh`
-3. run command `source /dev/stdin <<<(./src/theme/color_utils.sh <parameters> <version>) &>/dev/null`
+3. run command `source /dev/stdin <<(./color_utils.sh <parameters> <version>) &>/dev/null`
     - parameters 
         - load    - load color in bash
         - remove  - remove color from bash
@@ -64,10 +64,12 @@ All command below, you should run by `source` keyword (source <FILE_NAME>)
 2. BACKGROUND           background
 3. BOLD                 Bold Text
 4. UNDERLINE            Underlined Text
-5. REVERSE              Reverse video Text (support some app / OS)
+5. REVERSE              Reverse Text (support some app / OS)
+    - swap `fg` <-> `bg`
 6. BLINK                Blinking Text (support some app / OS)
 7. INVISIBLE            Invisible Text (support some app / OS)
 8. STANDOUT             `Standout Mode` (support some app / OS)
+    - swap `fg` <-> `bg`
 
 |Special       |Constants Code|
 |--------------|--------------|
