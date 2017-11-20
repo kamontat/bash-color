@@ -15,7 +15,7 @@
 
 # Usage
 1. download utils.sh from [release](https://github.com/kamontat/bash-color/releases) page
-2. give permission to file by run `chmod +x ./utils.sh`
+2. give permission to file by run `chmod +x ./color_utils.sh`
 3. run command `source /dev/stdin <<(./color_utils.sh <parameters> <version>) &>/dev/null`
     - parameters 
         - load    - load color in bash
