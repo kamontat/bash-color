@@ -22,8 +22,8 @@ usage: source color_constant.sh
 test: ./color_constant.sh test
 -------------------------------
 create by Kamontat Chantrachirathumrong
-since 09/06/60-16:09 (dd/mm/yy-mm:ss)
-version 1.0
+since 11/12/60-16:09 (dd/mm/yy-mm:ss)
+version 1.1
 "
 
 unset C_COMPLETE
@@ -33,7 +33,7 @@ if [[ $1 == "help" || $1 == "h" ]]; then
     exit 0
 fi
 
-if which tput >/dev/null 2>&1; then
+if command -v tput >/dev/null; then
     ncolors=$(tput colors)
 else
     echo "not support tput, use color_raw_constant.sh instead."
