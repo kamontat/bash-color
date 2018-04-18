@@ -55,7 +55,7 @@ usage: 'source /dev/stdin <<<(./color_utils.sh <paramter> <version>) &>/dev/null
         - @params 1 - version number (tag in github 'https://github.com/kamontat/bash-color/releases')
       3. clear   | c - clear cache from system
       4. test    | t - run test command (check is color loaded?)
-      5. version | v - get current `bash-color` version
+      5. version | v - get current 'bash-color' version
       6. help    | h - help command
     "
     exit 0
