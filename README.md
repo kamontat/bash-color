@@ -1,5 +1,5 @@
 # Install
-1. clone this project by `git clone https://gist.github.com/717f75e6b87606940017adf385274044.git color`
+1. clone this project by `git clone https://github.com/kamontat/bash-color.git color`
 
 # Run
 1. make computer can run install.bash
